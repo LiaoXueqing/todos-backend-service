@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.autoconfigure.flyway.FlywayDataSource;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +16,6 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @Builder
 @Entity
-@FlywayDataSource
 @Table(name = "todo")
 public class Todo {
     @Id
@@ -26,4 +24,16 @@ public class Todo {
 
     private String content;
     private boolean isChecked;
+
+    public int getId() {
+        return id;
+    }
+
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public String getContent() {
+        return content;
+    }
 }
