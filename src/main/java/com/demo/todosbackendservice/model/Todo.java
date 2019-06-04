@@ -24,16 +24,4 @@ public class Todo {
 
     private String content;
     private boolean isChecked;
-
-    public int getId() {
-        return id;
-    }
-
-    public boolean isChecked() {
-        return isChecked;
-    }
-
-    public String getContent() {
-        return content;
-    }
 }
