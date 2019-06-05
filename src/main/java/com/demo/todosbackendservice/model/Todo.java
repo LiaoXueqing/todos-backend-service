@@ -1,5 +1,6 @@
 package com.demo.todosbackendservice.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,6 +18,7 @@ import javax.persistence.Table;
 @Builder
 @Entity
 @Table(name = "todo")
+@JsonIgnoreProperties(value={"hibernateLazyInitializer"})
 public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
