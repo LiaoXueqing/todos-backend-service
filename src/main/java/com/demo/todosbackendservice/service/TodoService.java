@@ -24,4 +24,8 @@ public class TodoService {
     public Todo save(Todo todo) {
         return todoRepository.save(todo);
     }
+
+    public Todo findTodoById(int id) {
+        return todoRepository.getOne(id);
+    }
 }
